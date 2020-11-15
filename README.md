@@ -8,24 +8,24 @@ Open conversation with a contact in Slack
 # To start
 1. Download and install [Slack.alfredworkflow](https://github.com/packal/repository/raw/master/com.yannickglt.alfred2.slack/slack.alfredworkflow)
 2. Create a custom app for your team following [these steps](#create-an-app-for-your-team).
-3. Once you have your client ID and Secret, visit the address [https://jsqu99.github.io/alfred-slack/](https://yannickglt.github.io/alfred-slack/) to generate a unique code for authentication in the Workflow.
-  
+3. Once you have your client ID and Secret, visit the address [https://jsqu99.github.io/alfred-slack/](https://jsqu99.github.io/alfred-slack/) to generate a unique code for authentication in the Workflow.
+
     1. Enter your team name in the first field and your client ID in the second one, then click on the button "Generate code".
-      
+
       ![image](https://user-images.githubusercontent.com/1006426/46915167-2494ff80-cfa8-11e8-81cd-25ff613cfdf4.png)
-    
-    2. Authorize the app to access your Slack team with the rights below. 
-      
+
+    2. Authorize the app to access your Slack team with the rights below.
+
       ![image](https://user-images.githubusercontent.com/1006426/46915174-38d8fc80-cfa8-11e8-8aae-9b3da44db2c2.png)
-    
+
     3. Copy your generated unique code in your clipboard.
-      
+
       ![image](https://user-images.githubusercontent.com/1006426/46915183-50b08080-cfa8-11e8-9a70-12fe531185e0.png)
-      
+
 4. Launch the slack workflow with the parameter `--add-client` followed by the concatenation of the generated unique code and client Secret separated by a colon (e.g.: `UNIQUE_CODE:CLIENT_SECRET`).
 You can add several clients if you want to collaborate with several teams. You just need to repeat the two last steps.
-  
-    Example: 
+
+    Example:
     ```
     slack --add-client 1234567890.123456789012|1234567890.123456789012.abcdef1234:1234567890abcdef1234567890abcdef
     ```
@@ -36,7 +36,7 @@ You can add several clients if you want to collaborate with several teams. You j
     slack --refresh
     ```
     **The cache refresh may take up to several minutes depending on your organization size.**
-  
+
 6. Enjoy!
 
    Note: install the [Packal Updater](http://www.packal.org/workflow/packal-updater) workflow if you want automatic updates.
@@ -97,7 +97,7 @@ You can add several clients if you want to collaborate with several teams. You j
   ```
 
 - Search both messages and files
-  
+
   ```
   slack --search <query>
   ```
@@ -129,6 +129,6 @@ You can add several clients if you want to collaborate with several teams. You j
 
 > :warning: Never share the client secret on the web or on public repository
 
-4. Go to the section OAuth & Permissions (under the Features category), add the two redirect URLs `http://jsqu99.github.io/alfred-slack/` and `https://yannickglt.github.io/alfred-slack/` and click on `Save URLs`.
+4. Go to the section OAuth & Permissions (under the Features category), add the two redirect URLs `http://jsqu99.github.io/alfred-slack/` and `https://jsqu99.github.io/alfred-slack/` and click on `Save URLs`.
 
     ![image](https://user-images.githubusercontent.com/1006426/29512021-5b623578-8661-11e7-96b4-6650e735b4f4.png)
